@@ -1,0 +1,172 @@
+.complain {
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    top: 141 / $unit * $symbol;
+    bottom: 39 / $unit * $symbol;
+  }
+  background-color:#f4f4f4;
+  overflow: auto;
+  &-title {
+    @include vertical_center();
+    width: 100%;
+    height: 81 / $unit * $symbol;
+    padding: {
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    font-size: 30 / $unit * $symbol;
+    color: #333333;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+    span {
+      color: #eb2828;
+    }
+  }
+  &-detail {
+    width: 100%;
+    background-color: #fff;
+    padding: {
+      top: 18 / $unit * $symbol;
+    }
+    textarea {
+      width: 100%;
+      height: 300 / $unit * $symbol;
+      padding: {
+        left: 45 / $unit * $symbol;
+        right: 45 / $unit * $symbol;
+      }
+      font-size: 27 / $unit * $symbol;
+      color: #333;
+    }
+    textarea::-webkit-textarea-placeholder {
+      font-size: 24 / $unit * $symbol;
+      color: #ababab;
+      line-height: 36 / $unit * $symbol;
+    }
+    .detail-num {
+      @include vertical_center();
+      $param: (flex flex) (justifyContent flex-end);
+      @include flexSet($param);
+      width: 100%;
+      height: 57 / $unit * $symbol;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      font-size: 27 / $unit * $symbol;
+      color: #6f6f6f;
+      border: {
+        bottom: 1px solid #e1e1e1;
+      }
+    }
+  }
+  &-upload {
+    width: 100%;
+    padding: {
+      top: 36 / $unit * $symbol;
+      left: 36 / $unit * $symbol;
+      right: 36 / $unit * $symbol;
+      bottom: 48 / $unit * $symbol;
+    }
+    background-color: #fff;
+    .upload-photo {
+      @include vertical_center();
+      width: 100%;
+      .photo-add {
+        @include center();
+        width: 147 / $unit * $symbol;
+        height: 147 / $unit * $symbol;
+        margin: {
+          right: 48 / $unit * $symbol;
+        }
+        border-radius: 9 / $unit * $symbol;
+        border: 1px dashed #c1c1c1;
+        i {
+          font-size: 78 / $unit * $symbol;
+          font-weight: 700;
+          color: #bbbbbb;
+        }
+      }
+      .photo-default {
+        position: relative;
+        width: 147 / $unit * $symbol;
+        height: 147 / $unit * $symbol;
+        margin: {
+          right: 48 / $unit * $symbol;
+        }
+        border: 1px solid #d9d9d9;
+        border-radius: 9 / $unit * $symbol;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 9 / $unit * $symbol;
+        }
+        .default-close {
+          position: absolute;
+          top: -18 / $unit * $symbol;
+          right: -15 / $unit * $symbol;
+          z-index: 9;
+          i {
+            font-size: 30 / $unit * $symbol;
+            color: #999;
+          }
+        }
+      }
+    }
+    .upload-suggest {
+      @include vertical_center();
+      width: 100%;
+      height: 81 / $unit * $symbol;
+      font-size: 27 / $unit * $symbol;
+      color: #999;
+      span:first-of-type {
+        margin: {
+          right: 9 / $unit * $symbol;
+        }
+        color: #333;
+      }
+    }
+  }
+  &-contact {
+    @include vertical_center_horizontal_between();
+    width: 100%;
+    height: 99 / $unit * $symbol;
+    margin: {
+      top: 21 / $unit * $symbol;
+    }
+    padding: {
+      left: 36 / $unit * $symbol;
+      right: 36 / $unit * $symbol;
+    }
+    background-color: #fff;
+    input {
+      width: 100%;
+      height: 100%;
+      font-size: 30 / $unit * $symbol;
+      color: #333;
+      &::-webkit-input-placeholder {
+        color: #999;
+      }
+    }
+  }
+  &-submit {
+    width: 100%;
+    height: 96 / $unit * $symbol;
+    padding: {
+      left: 33 / $unit * $symbol;
+      right: 33 / $unit * $symbol;
+    }
+    margin: {
+      top:  42 / $unit * $symbol;
+    }
+    .submit-btn {
+      width: 100%;
+      height: 100%;
+      font-size: 39 / $unit * $symbol;
+      color: #fff;
+      background-color: #29A1F7;
+      border-radius: 9 / $unit * $symbol;
+    }
+  }
+}

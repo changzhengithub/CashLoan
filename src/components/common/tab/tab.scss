@@ -1,0 +1,43 @@
+.tab {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  $param: (flex flex) (alignItems center);
+  @include flexSet($param);
+  width: 100vw;
+  height: 99 / $unit * $symbol;
+
+  border: {
+    top: 1px solid #dbdbdc;
+  }
+
+  background-color: #fff;
+
+  &-item {
+    position: relative;
+    @include column_center();
+    width: 33%;
+    height: 100%;
+
+    padding: {
+      top: 12 / $unit * $symbol;
+    }
+
+    .item-img {
+      width: 40 / $unit * $symbol;
+      height: 38 / $unit * $symbol;
+    }
+    .item-name {
+      @include vertical_center();
+      height: 36 / $unit * $symbol;
+      font-size: 21 / $unit * $symbol;
+      color: #666;
+    }
+
+    .active {
+      color: #222;
+    }
+  }
+}

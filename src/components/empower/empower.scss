@@ -1,0 +1,260 @@
+.empower {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  &-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    @include center();
+    width: 100%;
+    height: 129 / $unit * $symbol;
+    padding: {
+      top: 36 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    .header-left {
+      position: absolute;
+      top: 57 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+      z-index: 9;
+      i {
+        font-size: 30 / $unit * $symbol;
+        font-weight: 700;
+        color: #333;
+      }
+    }
+    .header-title {
+      @include center();
+      width: 100%;
+      height: 100%;
+      font-size: 36 / $unit * $symbol;
+      color: #333;
+      font-weight: 500;
+    }
+    .header-item {
+      $param: (flex flex) (alignItems center) (justifyContent flex-end);
+      @include flexSet($param);
+      width: 100%;
+      height: 100%;
+      padding: {
+        right: 15 / $unit * $symbol;
+      }
+      font-size: 36 / $unit * $symbol;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+  &-logo {
+    width: 100%;
+    height: 534 / $unit * $symbol;
+    margin: {
+      bottom: 51 / $unit * $symbol;
+    }
+    .logo {
+      width: 100%;
+      height: 492 / $unit * $symbol;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .logo-tip {
+      width: 100%;
+      height: 42 / $unit * $symbol;
+      padding: {
+        left: 30 / $unit * $symbol;
+      }
+      img {
+        width: 312 / $unit * $symbol;
+        height: 100%;
+      }
+    }
+  }
+  &-goto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    $param: (flex flex) (alignItems center) (justifyContent flex-end);
+    @include flexSet($param);
+    width: 100%;
+    height: 129 / $unit * $symbol;
+    padding: {
+      top: 60 / $unit * $symbol;
+      left: 42 / $unit * $symbol;
+      right: 42 / $unit * $symbol;
+    }
+    span {
+      font-size: 36 / $unit * $symbol;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  &-input-list {
+    width: 100%;
+    padding: {
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    .list-item {
+      $param: (flex flex) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      width: 100%;
+      height: 99 / $unit * $symbol;
+      border: {
+        bottom: 1px solid #e5e5e5;
+      }
+      input {
+        @include flex_1();
+        $param: (flex flex) (alignItems center);
+        @include flexSet($param);
+        width: 420 / $unit * $symbol;
+        height: 100%;
+        font-size: 36 / $unit * $symbol;
+        color: #000;
+        background: transparent;
+        &::-webkit-input-placeholder {
+          font-size: 30 / $unit * $symbol;
+          color: #b5b5b5;
+        }
+      }
+      .item-password-switch {
+        width: 40 / $unit * $symbol;
+        i {
+          font-size: 32 / $unit * $symbol;
+          color: #c7c7c7;
+        }
+      }
+      .item-code-gain {
+        width: 171 / $unit * $symbol;
+        height: 54 / $unit * $symbol;
+        .gain-btn {
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          font-size: 27 / $unit * $symbol;
+          color: #FE5426;
+        }
+        .code-active {
+          // background: #DECECE;
+          color: #7E7E7E;
+        }
+      }
+    }
+  }
+  .active {
+    width: 100%;
+    padding: 0;
+    .list-item {
+      width: 100%;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      background: #fff;
+    }
+  }
+  &-tip-title {
+    
+    width: 100%;
+    height: (96 + 129) / $unit * $symbol;
+    
+    border: {
+      top: 1px solid #d9d9d9;
+      bottom: 1px solid #e5e5e5;
+    }
+    background: #f5f7f6;
+    .title-cover {
+      width: 100%;
+      height: 129 / $unit * $symbol;
+      background-color: #fff;
+      border: {
+        bottom: 1px solid #e5e5e5;
+      }
+    }
+    p {
+      $param: (flex flex) (alignItems center) (justifyContent flex-start);
+      @include flexSet($param);
+      width: 100%;
+      height: 96 / $unit * $symbol;
+      padding: {
+        left: 30 / $unit * $symbol;
+      }
+      font-size: 27 / $unit * $symbol;
+      color: #999999;
+    }
+  }
+  &-protocol {
+    $param: (flex flex) (alignItems center);
+    @include flexSet($param);
+    width: 100%;
+    height: 126 / $unit * $symbol;
+    padding: {
+      top: 39 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    font-size: 27 / $unit * $symbol;
+    color: #999999;
+    span:last-of-type {
+      padding: {
+        left: 9 / $unit * $symbol;
+      }
+      color: #333;
+    }
+  }
+  &-btn {
+    width: 100%;
+    height: 90 / $unit * $symbol;
+    margin: {
+      top: 90 / $unit * $symbol;
+    }
+    padding: {
+      left: 30 / $unit * $symbol;
+      right: 30 / $unit * $symbol;
+    }
+    button {
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      background: #FE5426;
+      font-size: 33 / $unit * $symbol;
+      color: #fff;
+      border-radius: 9 / $unit * $symbol;
+    }
+  }
+  .far-away {
+    margin: {
+      top: 20 / $unit * $symbol;
+    }
+  }
+  &-operation {
+    $param: (flex flex) (alignItems center) (justifyContent space-between);
+    @include flexSet($param);
+    width: 100%;
+    height: 60 / $unit * $symbol;
+    margin: {
+      top: 36 / $unit * $symbol;
+    }
+    padding: {
+      left: 51 / $unit * $symbol;
+      right: 51 / $unit * $symbol;
+    }
+    .operation-item {
+      $param: (flex flex) (alignItems center);
+      @include flexSet($param);
+      height: 100%;
+      font-size: 27 / $unit * $symbol;
+      color: #999999;
+    }
+    .operation-item:first-of-type {
+      color: #333333;
+    }
+    .forget {
+      color: #333333;
+    }
+  }
+}

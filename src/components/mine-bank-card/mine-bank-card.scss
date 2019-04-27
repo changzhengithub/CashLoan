@@ -1,0 +1,100 @@
+.mine-bank-card {
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    top: 141 / $unit * $symbol;
+  }
+  background-color: #f4f4f4;
+  .card-content {
+    width: 100%;
+    height: 100%;
+    padding: {
+      top: 30 / $unit * $symbol;
+      bottom: 30 / $unit * $symbol;
+    }
+    .content-without {
+      width: 100%;
+      padding: {
+        left: 24 / $unit * $symbol;
+        right: 24 / $unit * $symbol;
+      }
+      .without-text {
+        @include center();
+        height: 180 / $unit * $symbol;
+        font-size: 27 / $unit * $symbol;
+        color: #999;
+      }
+      .without-add {
+        @include center();
+        width: 100%;
+        height: 60 / $unit * $symbol;
+        .add-btn {
+          height: 60 / $unit * $symbol;
+          padding: {
+            left: 21 / $unit * $symbol;
+            right: 21 / $unit * $symbol;
+          }
+          border: 1px solid #3b9bff;
+          font-size: 27 / $unit * $symbol;
+          color: #3b9bff;
+          background-color: transparent;
+        }
+      }
+    }
+    .content-list {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding: {
+        left: 30 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      .list-item {
+        @include vertical_direction();
+          width: 100%;
+          height: 210 / $unit * $symbol;
+          padding: {
+            left: 24 / $unit * $symbol;
+            right: 24 / $unit * $symbol;
+          }
+          margin: {
+            bottom: 30 / $unit * $symbol;
+          }
+          background-color: #fff;
+          border-radius: 10 / $unit * $symbol;
+          .item-detail {
+            @include vertical_center();
+            width: 100%;
+            height: 111 / $unit * $symbol;
+            .icon {
+              width: 78 / $unit * $symbol;
+              height: 78 / $unit * $symbol;
+            }
+            .detail-name {
+              width: 100%;
+              padding: {
+                left: 15 / $unit * $symbol;
+              }
+              color: #333;
+              p:first-of-type {
+                height: 45 / $unit * $symbol;
+                font-size: 33 / $unit * $symbol;
+              }
+              p:last-of-type {
+                height: 39 / $unit * $symbol;
+                font-size: 27 / $unit * $symbol;
+              }
+            }
+          }
+          .item-card {
+            $param: (flex flex) (alignItems center) (justifyContent flex-end);
+            @include flexSet($param);
+            flex: 1;
+            width: 100%;
+            font-size: 42 / $unit * $symbol;
+            color: #000;
+          }
+      }
+    }
+  }
+}

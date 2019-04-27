@@ -1,0 +1,120 @@
+.credit-contact {
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    top: 141 / $unit * $symbol;
+  }
+  background-color: #f4f4f4;
+  .contact-main {
+    width: 100%;
+    .main-title {
+      position: relative;
+      @include vertical_center();
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      padding: {
+        left: 33 / $unit * $symbol;
+      }
+      span {
+        font-size: 24 / $unit * $symbol;
+        color: #999;
+      }
+    }
+    .main-list {
+      width: 100%;
+      padding: {
+        left: 36 / $unit * $symbol;
+      }
+      background-color: #fff;
+      .list-item {
+        @include vertical_center_horizontal_between();
+        width: 100%;
+        height: 93 / $unit * $symbol;
+        padding: {
+          right: 33 / $unit * $symbol;
+        }
+        border-bottom: 1px solid #E4E4E4;
+        .item-title {
+          font-size: 27 / $unit * $symbol;
+          color: #333;
+        }
+        .item-name {
+          @include vertical_center();
+          width: 105 / $unit * $symbol;
+          height: 100%;
+          font-size: 27 / $unit * $symbol;
+          color: #333;
+        }
+        .item-arrow {
+          @include vertical_center();
+          span {
+            font-size: 24 / $unit * $symbol;
+            color: #C6C6C6;
+          }
+          .arrow-img {
+            width: 12 / $unit * $symbol;
+            height: 21 / $unit * $symbol;
+            margin: {
+              left: 12 / $unit * $symbol;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .item-detail {
+          @include vertical_center_horizontal_between();
+          @include flex_1();
+          height: 100%;
+          input {
+            height: 100%;
+            font-size: 27 / $unit * $symbol;
+            color: #333;
+            &::-webkit-input-placeholder {
+              font-size: 27 / $unit * $symbol;
+              color: #D3D3D3;
+            }
+          }
+          .detail-icon {
+            width: 42 / $unit * $symbol;
+            height: 36 / $unit * $symbol;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        &:last-of-type {
+          border: none;
+        }
+      }
+    }
+  }
+  .contact-tip {
+    @include center();
+    width: 100%;
+    height: 117 / $unit * $symbol;
+    font-size: 24 / $unit * $symbol;
+    color: #B3B3B3;
+  }
+  .contact-submit {
+    width: 100%;
+    height: 96 / $unit * $symbol;
+    padding: {
+      left: 33 / $unit * $symbol;
+      right: 33 / $unit * $symbol;
+    }
+    margin: {
+      top:  15 / $unit * $symbol;
+    }
+    .submit-btn {
+      width: 100%;
+      height: 100%;
+      font-size: 39 / $unit * $symbol;
+      color: #fff;
+      background-color: #29A1F7;
+      border-radius: 9 / $unit * $symbol;
+    }
+  }
+}

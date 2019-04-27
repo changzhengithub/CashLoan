@@ -1,0 +1,155 @@
+.add-bank-card {
+  width: 100vw;
+  height: 100vh;
+  padding: {
+    top: 141 / $unit * $symbol;
+  }
+  background-color: #f4f4f4;
+  .card-title {
+    position: relative;
+    @include vertical_center();
+    width: 100%;
+    // height: 105 / $unit * $symbol;
+    padding: {
+      top: 21 / $unit * $symbol;
+      left: 30 / $unit * $symbol;
+      bottom: 21 / $unit * $symbol;
+    }
+    border-bottom: 1px solid #e4e4e4;
+    .title-img {
+      width: 27 / $unit * $symbol;
+      height: 27 / $unit * $symbol;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title-text {
+      width: 690 / $unit * $symbol;
+      height: 100%;
+      padding: {
+        left: 15 / $unit * $symbol;
+        right: 30 / $unit * $symbol;
+      }
+      p {
+        width: 100%;
+        line-height: 45 / $unit * $symbol;
+        font-size: 30 / $unit * $symbol;
+        color: #999;
+      }
+    }
+  }
+  .card-form {
+    width: 100%;
+    padding: {
+      left: 30 / $unit * $symbol;
+    }
+    background-color: #fff;
+    .form-item {
+      @include vertical_center_horizontal_between();
+      width: 100%;
+      height: 99 / $unit * $symbol;
+      padding: {
+        right: 30 / $unit * $symbol;
+      }
+      border-bottom: 1px solid #E4E4E4;
+      .item-title {
+        @include vertical_center();
+        width: 20%;
+        height: 100%;
+        font-size: 27 / $unit * $symbol;
+        color: #333;
+      }
+      .item-detail {
+        $param: (flex flex) (alignItems center) (justifyContent flex-end);
+        @include flexSet($param);
+        width: 80%;
+        height: 100%;
+        .detail-input {
+          @include flex_1();
+          height: 100%;
+          text-align: right;
+          font-size: 27 / $unit * $symbol;
+          color: #333333;
+          background-color: transparent;
+          &::-webkit-input-placeholder {
+            color: #9e9e9e;
+          }
+        }
+        i {
+          font-size: 24 / $unit * $symbol;
+          color: #9e9e9e;
+        }
+        .detail-code {
+          height: 100%;
+          padding: {
+            left: 30 / $unit * $symbol;
+            // right: 15 / $unit * $symbol;
+          }
+          .code-btn {
+            width: 100%;
+            height: 100%;
+            font-size: 24 / $unit * $symbol;
+            color: #fe5426;
+            background-color: #fff;
+          }
+          .code-active {
+            color: #999;
+          }
+        }
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+  .card-tip {
+    @include center();
+    width: 100%;
+    height: 105 / $unit * $symbol;
+    font-size: 24 / $unit * $symbol;
+    color: #B3B3B3;
+  }
+  .card-submit {
+    width: 100%;
+    height: 96 / $unit * $symbol;
+    padding: {
+      left: 33 / $unit * $symbol;
+      right: 33 / $unit * $symbol;
+    }
+    margin: {
+      top:  21 / $unit * $symbol;
+    }
+    .submit-btn {
+      width: 100%;
+      height: 100%;
+      font-size: 39 / $unit * $symbol;
+      color: #fff;
+      background-color: #29A1F7;
+      border-radius: 9 / $unit * $symbol;
+    }
+  }
+  .select-tip {
+    @include center();
+    width: 100%;
+    height: 90 / $unit * $symbol;
+    font-size: 24 / $unit * $symbol;
+    color: #b5b5b5;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+  }
+  .card-select {
+    width: 100%;
+    height: 420 / $unit * $symbol;
+    background-color: #fff;
+    overflow: auto;
+    .select-item {
+      @include center();
+      width: 100%;
+      height: 90 / $unit * $symbol;
+      border-bottom: 1px solid #eee;
+      font-size: 30 / $unit * $symbol;
+      color: #666;
+    }
+  }
+}
