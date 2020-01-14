@@ -72,6 +72,7 @@
 import Storage from '../../class/Storage.class.js'
 import Http from '../../class/Http.class.js'
 import Check from '../../class/Check.class.js'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Empower',
   data () {
@@ -170,12 +171,41 @@ export default {
       passwordType: 'password'
     }
   },
+  computed: {
+    // 直接获取state数据
+    phoneCopy () {
+      return this.$store.state.phone
+    },
+    // 通过mapState获取state数据
+    ...mapState(['idCard']),
+
+    // 和获取state数据一样，使用mapGetters
+    ...mapGetters(['doneCount', 'multiplyCount', 'transferCount']),
+  },
   created () {
+    // 使用commit提交mutations
+    this.$store.commit('doneStateCount', 3);
+    // 通过mapMutations修改state数据
+    this.doneStateCount(3)
+    
+    // 获取state数据
+    console.log(this.phoneCopy)
+    console.log(this.idCard)
+    // 获取getters数据
+    console.log(this.$store.getters.multiplyCount)
+    console.log(this.$store.getters.doneCount)
+    console.log(this.$store.getters.transferCount(20))
+    // 通过mapGetters调用getters
+    console.log(this.doneCount)
+    console.log(this.multiplyCount)
+    console.log(this.transferCount(33))
     // console.log(this.$route.query)
     this.state = this.status.get(this.type)
     this.submit = this.loginByPwd
   },
   methods: {
+    // 通过mapMutations修改state数据
+    ...mapMutations(['doneStateCount']),
     getCode () {
       if (!Check.phone(this.phone)) return
       this.codeDisabled = true

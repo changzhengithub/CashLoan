@@ -1,5 +1,9 @@
 const mutations = {
 
+  doneStateCount(state, num) {
+    state.count = state.count + num
+  },
+
   saveToken (state, token) {
     state.token = token
   },

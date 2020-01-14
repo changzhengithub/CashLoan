@@ -1,7 +1,7 @@
 const state = {
   token: null,
-  phone: null,
-  idCard: null,
+  phone: '17730127131',
+  idCard: '341322199610100000',
   trueName: null,
   customerId: null,
   udKey: null,
@@ -12,6 +12,7 @@ const state = {
   isCreditAll: null, // 全部认证
   recordDetailInfo: null, // 记录详情
   messageId: [],
-  messageDetail: null
+  messageDetail: null,
+  count: 2  // 测试getters mutations
 }
 export default state
